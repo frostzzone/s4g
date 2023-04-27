@@ -1,21 +1,10 @@
-# Scratch For Web
-Scratch For Web - Create Dynamic Responsive Webpages fast using blocks!
-
-<img src="meta.png" width="500" alt="Screenshot" />
-
+# Scratch For Guilded
+Scratch For Guilded - Create a guilded bot with a bit more logic!
 
 ## Links
 
-Website: https://scratch4web.vercel.app/
-
-Discord: https://discord.gg/57HNMGDvXa
+Website: *soon*
 
 ## TODO
- * Support more HTML tags and attributes
- * Enforce HTML tag-nesting rules via types
- * Many more …
-
-## Further ideas
- * Maybe support generating other markup languages (Markdown, LaTeX)
- * Add script-tag and allow for standard Blockly blocks in there
+ * Actually finish
 
