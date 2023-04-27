@@ -1,5 +1,9 @@
 <template>
 <CDropdownMenu>
+  <CDropdownItem class="lightwhencursor">
+									<img src="/assets/guilded-icon.png" alt="" width="32" height="24" class="d-inline-block align-top" /> No links yet
+								</CDropdownItem>
+  <!--
 								<CDropdownItem class="lightwhencursor" href="https://discord.gg/57HNMGDvXa">
 									<img src="/assets/discord-icon.svg" alt="" width="22" height="24" class="d-inline-block align-top" /> Support
 								</CDropdownItem>
@@ -9,6 +13,7 @@
 								<CDropdownItem class="lightwhencursor" href="https://github.com/Scratch-For-Web/Web-Application">
 									<img src="/assets/github-icon.svg" alt="" width="22" height="24" class="d-inline-block align-top" /> Source Code
 								</CDropdownItem>
+  -->
 							</CDropdownMenu>
 </template>
 

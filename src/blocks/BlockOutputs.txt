@@ -1,0 +1,17 @@
+Default:
+  null        anything
+  Boolean     true / false
+  Number      number (ex: 1)
+  String      text (ex: 'hello')
+  Array       List (ex: [])
+  Multiple    [Output1, Output2]
+
+Custom:
+  Messages    messages
+  Embed       embeds
+  Author      users (not server linked)
+  Member      members (server linked)
+  Channel     channels
+  Server      servers
+  Rol         roles (not sure if you can use)
+

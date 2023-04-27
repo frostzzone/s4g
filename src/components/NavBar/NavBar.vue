@@ -2,7 +2,7 @@
 	<div class="topnav">
 		<CNavbar expand="lg" color-scheme="dark" class="bg-dark">
 			<CContainer fluid>
-				<CNavbarBrand><img src="/logo.png" alt="" width="22" height="24" class="d-inline-block align-top" /> Scratch for Web</CNavbarBrand>
+				<CNavbarBrand><img src="/logo.png" alt="" width="42" height="32" class="d-inline-block align-top" /> Scratch for Guilded</CNavbarBrand>
 				<CNavbarToggler @click="visible = !visible;" />
 				<CCollapse class="navbar-collapse" :visible="visible">
 					<CNavbarNav>
@@ -16,7 +16,6 @@
 						</CDropdown>
 						<!--<CNavLink class="lightwhencursor anim" @click="sayCode()">View Code</CNavLink>-->
 						<CodeModal></CodeModal>
-						<CNavLink class="lightwhencursor anim" @click="displaySite()">Run Site</CNavLink>
 					</CNavbarNav>
 				</CCollapse>
 			</CContainer>
@@ -26,14 +25,14 @@
 </template>
 <script>
 	import FileMenu from "./FileMenu.vue";
+  import CodeModal from "./CodeModal.vue";
 	import LinksMenu from "./LinksMenu.vue";
-	import CodeModal from "./CodeModal.vue";
 	export default {
 		name: "navbar",
 		components: {
     FileMenu,
-		LinksMenu,
-		CodeModal
+    CodeModal,
+		LinksMenu
 		},
 		data: function() {
 			return {
@@ -70,15 +69,6 @@
 		})
 	}
 
-	function displaySite() {
-		const code = Blockly.JavaScript.workspaceToCode(Blockly.getMainWorkspace())
-		const blob = new Blob([code], {
-			type: "text/html"
-		})
-		let newWindow = window.open('/s4w')
-		const url = window.URL.createObjectURL(blob);
-		newWindow.location = url;
-	}
 </script>
 <style scoped>
 	.topnav {

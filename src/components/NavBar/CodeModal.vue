@@ -2,7 +2,7 @@
 	<CNavLink class="lightwhencursor anim" @click="() => { visibleLiveDemo = true; getCode() }">View Code</CNavLink>
 	<CModal fullscreen :visible="visibleLiveDemo" @close="() => { visibleLiveDemo = false }">
 		<CModalHeader>
-			<CModalTitle>Your HTML</CModalTitle>
+			<CModalTitle>JavaScript Code</CModalTitle>
 		</CModalHeader>
 		<CModalBody>
 			<textarea disabled :value="code" id="code_TextArea_element_exporting_code" class="textarea">
@@ -25,6 +25,9 @@
 	import 'prismjs/themes/prism-tomorrow.css'
 	import Prism from 'prismjs'
 
+  // Code Gen stuff
+  import codeGen from './codeGenBase.js'
+
 	export default {
 		name: "editmenu",
 		data() {
@@ -36,16 +39,16 @@
 		computed: {
 			content: function() {
 				console.log("ran")
-				return beautify.html(Blockly.JavaScript.workspaceToCode(Blockly.getMainWorkspace()));
+				return beautify.js(Blockly.JavaScript.workspaceToCode(Blockly.getMainWorkspace()));
 			}
 		},
 		methods: {
 			copy() {
-				var url = beautify.html(Blockly.JavaScript.workspaceToCode(Blockly.getMainWorkspace()));;
+				var url = beautify.js(Blockly.JavaScript.workspaceToCode(Blockly.getMainWorkspace()));;
 				navigator.clipboard.writeText(url)
 			},
 			getCode() {
-				this.code = beautify.html(Blockly.JavaScript.workspaceToCode(Blockly.getMainWorkspace()));
+				this.code = beautify.js(codeGen(Blockly.JavaScript.workspaceToCode(Blockly.getMainWorkspace())));
 			}
 		}
 	}

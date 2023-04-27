@@ -3,6 +3,9 @@ import CoreuiVue from '@coreui/vue';
 //https://coreui.io/vue/docs
 import { createStore } from 'vuex'
 
+//blockly wow
+import Blockly from "blockly/core";
+
 const store = createStore({
     state: {
         workspace: 0,
@@ -11,7 +14,7 @@ const store = createStore({
     mutations: {
         setWorkspace(state, { workspace }) {
             state.workspace = workspace;
-        }
+        },
     }
 });
 

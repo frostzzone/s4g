@@ -28,6 +28,7 @@ export default async function register(self) {
           title: "Auto save found!",
           html: "Load?",
           showDenyButton: true,
+          allowOutsideClick: true,
           icon: "question",
           denyButtonText: "Cancel",
           confirmButtonText: "Load",

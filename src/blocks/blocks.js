@@ -1,8 +1,5 @@
-import './html_blocks.js';
-import './html_generator.js';
+// Removed all imports
 
-// Frameworks
-
-//Reactjs
-import './frameworks/Reactjs/blocks.js'
-import './frameworks/Reactjs/es6.generator.js'
+import './base'
+import './messages'
+import './fsh'

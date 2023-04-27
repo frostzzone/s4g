@@ -29,7 +29,7 @@ var options = {
           toolbox: toolbox,
           collapse: true,
           //        comments : false,
-          //        disable : false,
+          disable : true,
           maxBlocks: Infinity,
           trashcan: true,
           renderer: "zelos",

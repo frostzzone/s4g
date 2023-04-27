@@ -18,7 +18,7 @@
 	// broken so not for now
 	import savenload from '../save-load.js';
 	import toolbox from "../toolbox";
-	import workspaceXmlVeryImportant from "../workspace";
+	//import workspaceXmlVeryImportant from "../workspace";
 	var renderer = "zelos";
 	import {
 		WorkspaceSearch
@@ -1272,7 +1272,9 @@ Author: <input type="text" id="EmbedAuthor"> PFP: <input type="text" id="EmbedAu
 			this.$store?.commit("setWorkspace", {
 				workspace,
 			});
-			Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(workspaceXmlVeryImportant), workspace);
+			//Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(workspaceXmlVeryImportant), workspace);
+      // Make disconected blocks Zzz
+      workspace.addChangeListener(Blockly.Events.disableOrphans);
 			savenload(this)
 
 			if (String(window.location.pathname).replace(/\//gmi, "") == "funni") {
