@@ -9,7 +9,7 @@
       type="file"
       accept=".s4w,.zip,.xml"
     />
-								<CDropdownItem class="lightwhencursor">Download</CDropdownItem>
+								<CDropdownItem class="lightwhencursor" @click="save">Download</CDropdownItem>
 							</CDropdownMenu>
 	
   <!--
@@ -136,7 +136,7 @@ export default {
           this.$store.state.workspace
         )
       );
-      const fileName = `${encodeURIComponent("Untitled Website").replace(/%20/g, " ")}.s4w`;
+      const fileName = `${encodeURIComponent("Untitled Bot").replace(/%20/g, " ")}.s4g`;
       zip.file("blocks.xml", xmlContent);
 			
       zip
@@ -173,8 +173,8 @@ export default {
           const fileHandle = await window.showSaveFilePicker({
             types: [
               {
-                description: "S4W Site File",
-                accept: { "application/zip": [".s4d"] },
+                description: "S4G File",
+                accept: { "application/zip": [".s4g"] },
               },
             ],
           });

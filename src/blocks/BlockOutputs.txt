@@ -5,6 +5,7 @@ Default:
   String      text (ex: 'hello')
   Array       List (ex: [])
   Multiple    [Output1, Output2]
+  Colour      color
 
 Custom:
   Messages    messages

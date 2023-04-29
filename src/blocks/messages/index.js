@@ -5,6 +5,7 @@ import "./embed"
 import "./messageCreated.js"
 
 // message info
+import "./messageContent"
 import "./messageAuthor.js"
 import "./messageChannel.js"
 import "./messageServer.js"

@@ -1,2 +1,3 @@
 import './createEmbed.js'
-import './setThing.js'
+import './setColor.js'
+import './setAuthor.js'

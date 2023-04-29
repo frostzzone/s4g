@@ -162,6 +162,42 @@ export default (favorites) => {
             </shadow>
           </value>
         </block>
+        <block type="s4g_includes">
+          <value name="a">
+            <shadow type="text">
+              <field name="TEXT">abc</field>
+            </shadow>
+          </value>
+          <value name="b">
+            <shadow type="text">
+              <field name="TEXT">b</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="s4g_startswith">
+          <value name="a">
+            <shadow type="text">
+              <field name="TEXT">abc</field>
+            </shadow>
+          </value>
+          <value name="b">
+            <shadow type="text">
+              <field name="TEXT">b</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="s4g_endswith">
+          <value name="a">
+            <shadow type="text">
+              <field name="TEXT">abc</field>
+            </shadow>
+          </value>
+          <value name="b">
+            <shadow type="text">
+              <field name="TEXT">c</field>
+            </shadow>
+          </value>
+        </block>
         <block type="text_indexOf">
           <value name="VALUE">
             <block type="variables_get">
@@ -296,6 +332,7 @@ export default (favorites) => {
       </category>
       <category name="Colour" categorystyle="colour_category">
         <block type="colour_picker"></block>
+        <block type="s4g_custom_colour"/>
         <block type="colour_random"></block>
         <block type="colour_rgb">
           <value name="RED">
@@ -347,7 +384,7 @@ custom="PROCEDURE"></category>
             </shadow>
           </value>
         </block>
-        <label text="Base blocks"/>
+        <label text="Repl"/>
         <block type="s4g_process_env">
           <value name="text">
             <shadow type="text">
@@ -355,12 +392,21 @@ custom="PROCEDURE"></category>
             </shadow>
           </value>
         </block>
+        <block type="s4g_webserver">
+          <value name="texte">
+            <shadow type="text">
+              <field name="TEXT">This website was created to keep a s4g bot on</field>
+            </shadow>
+          </value>
+        </block>
+        <label text="Base blocks"/>
         <block type="s4g_ready"/>
       </category>
       <category name="Messages" colour="30" expanded="true">
         <label text="Detect messages"/>
         <block type="s4g_messageCreated"/>
         <label text="Message info"/>
+        <block type="s4g_message_content"/>
         <block type="s4g_message_author"/>
         <block type="s4g_message_channel"/>
         <block type="s4g_message_server"/>
@@ -389,7 +435,19 @@ custom="PROCEDURE"></category>
             </shadow>
           </value>
         </block>
-        <block type="s4g_embed_set"/>
+        <block type="s4g_embed_set_color">
+          <value name="option">
+            <shadow type="colour_picker"/>
+          </value>
+        </block>
+        <block type="s4g_embed_set_author">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" pfp="FALSE" url="FALSE"></mutation>
+          <value name="Author">
+            <shadow type="text">
+              <field name="TEXT"></field>
+            </shadow>
+          </value>
+        </block>
       </category>
     </xml>`
 }
